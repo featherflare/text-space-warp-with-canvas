@@ -25,6 +25,9 @@ const Utils = {
   sign: (n) => (n < 0 ? -1 : 1),
 
   ease: (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t),
+
+  easeInOutQuint: (t) =>
+    t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t,
 }
 
 export default Utils
